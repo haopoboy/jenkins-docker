@@ -15,8 +15,9 @@ RUN apk add --no-cache \
         libgcc \
         linux-headers \
         make \
-        python
-&& for key in \
+        python \
+  # gpg keys listed at https://github.com/nodejs/node#release-team
+  && for key in \
     94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
     FD3A5288F042B6850C66B31F09FE44734EB7990E \
     71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
