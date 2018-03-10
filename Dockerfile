@@ -14,7 +14,7 @@ RUN apk add --no-cache \
         libgcc \
         linux-headers \
         make \
-        python \
+        python
 
 # Add docker
 ADD https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz /tmp
