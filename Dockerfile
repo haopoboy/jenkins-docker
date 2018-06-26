@@ -19,12 +19,10 @@ RUN addgroup jenkins docker
 # Add kubectl & helm
 WORKDIR /usr/local/bin
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
-    && curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash \
-    && chmod +x kubectl
- 
-# Clean
-RUN apk del --purge deps \
-    && rm /var/cache/apk/*
+    && chmod +x kubectl \
+    && apk add --update --no-cache ca-certificates \
+    && curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+    
 
 # Back to Jenkins home
 USER jenkins
