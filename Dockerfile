@@ -20,7 +20,7 @@ RUN addgroup jenkins docker
 WORKDIR /usr/local/bin
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
     && chmod +x kubectl \
-    && apk add --update --no-cache ca-certificates \
+    && apk add --update --no-cache ca-certificates openssl \
     && curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
     
 
