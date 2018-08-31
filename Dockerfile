@@ -3,8 +3,8 @@ FROM jenkins/jenkins:2.121.3-alpine
 USER root
 
 # Add node
-ENV NODE_VERSION 8.9.3
-RUN apk add --no-cache nodejs="$NODE_VERSION"-r1
+ENV NODE_VERSION 8.11.4
+RUN apk add --no-cache nodejs="$NODE_VERSION"-r0
 
 # Add docker
 ADD https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz /tmp
