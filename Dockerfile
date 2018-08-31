@@ -4,7 +4,7 @@ USER root
 
 # Add node
 ENV NODE_VERSION 8.11.4
-RUN apk add --no-cache nodejs="$NODE_VERSION"-r0
+RUN apk add --no-cache npm="$NODE_VERSION"-r0
 
 # Add docker
 ADD https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz /tmp
