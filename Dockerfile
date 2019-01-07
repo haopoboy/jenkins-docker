@@ -3,7 +3,7 @@ FROM jenkins/jenkins:2.138.4-alpine
 USER root
 
 # Add node
-ENV NODE_VERSION 8.11.4
+ENV NODE_VERSION 8.14.0
 RUN apk add --no-cache npm="$NODE_VERSION"-r0
 
 # Add docker
